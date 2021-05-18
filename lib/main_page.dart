@@ -1,0 +1,60 @@
+import 'package:flutter/material.dart';
+import 'package:mgt_prototype/my_bottle.dart';
+
+class MainPage extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return _MainPageState();
+  }
+}
+
+class _MainPageState extends State<MainPage> {
+  int _tabIndex = 1;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My Bottle'),
+      ),
+      body: _buildPage(_tabIndex),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.create_new_folder), label: 'Projects'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home_rounded), label: 'Home'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_bag), label: 'Market Place'),
+        ],
+        currentIndex: _tabIndex,
+        onTap: (index) {
+          setState(() {
+            _tabIndex = index;
+          });
+        },
+      ),
+    );
+  }
+}
+
+Widget _buildPage(int index) {
+  switch (index) {
+    case 0:
+      {
+        return Text('Project');
+      }
+    case 1:
+      {
+        return MyBottle();
+      }
+    case 2:
+      {
+        return Text('Market Place');
+      }
+    default:
+      {
+        return MyBottle();
+      }
+  }
+}
