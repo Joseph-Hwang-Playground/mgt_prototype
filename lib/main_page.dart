@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mgt_prototype/my_bottle.dart';
+import 'package:mgt_prototype/project_page.dart';
 
 class MainPage extends StatefulWidget {
   @override
@@ -14,24 +15,23 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('My Bottle'),
-        actions: [
-          IconButton(
-            icon: new Icon(Icons.info),
-            alignment: Alignment.center,
-            padding: new EdgeInsets.symmetric(horizontal: 4.0),
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: new Icon(Icons.settings),
-            alignment: Alignment.center,
-            padding: new EdgeInsets.symmetric(horizontal: 4.0),
-            onPressed: () {},
-          ),
-        ]
+      appBar: AppBar(title: Text('My Bottle'), actions: [
+        IconButton(
+          icon: new Icon(Icons.info),
+          alignment: Alignment.center,
+          padding: new EdgeInsets.symmetric(horizontal: 4.0),
+          onPressed: () {},
+        ),
+        IconButton(
+          icon: new Icon(Icons.settings),
+          alignment: Alignment.center,
+          padding: new EdgeInsets.symmetric(horizontal: 4.0),
+          onPressed: () {},
+        ),
+      ]),
+      body: SingleChildScrollView(
+        child: _buildPage(_tabIndex),
       ),
-      body: _buildPage(_tabIndex),
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
@@ -56,7 +56,7 @@ Widget _buildPage(int index) {
   switch (index) {
     case 0:
       {
-        return Text('Project');
+        return ProjectPage();
       }
     case 1:
       {
