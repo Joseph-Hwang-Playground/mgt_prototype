@@ -9,6 +9,18 @@ class ProjectEditor extends StatefulWidget {
 class _ProjectEditorState extends State<ProjectEditor> {
   int _tabIndex = 1;
 
+  toggleTab() {
+    if (_tabIndex == 1) {
+      setState(() {
+        _tabIndex = 2;
+      });
+    } else {
+      setState(() {
+        _tabIndex = 1;
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,7 +30,7 @@ class _ProjectEditorState extends State<ProjectEditor> {
           SizedBox(
             height: 8,
           ),
-          buildSelectModules(_tabIndex),
+          buildSelectModules(_tabIndex, this.toggleTab),
         ],
       ),
     );
@@ -27,8 +39,14 @@ class _ProjectEditorState extends State<ProjectEditor> {
 
 Widget _buildEditor() {
   return Container(
-    child: SizedBox(
-      height: 200,
+    child: Text(
+      'Customizing 하고있는 Bottle이 들어갈 예정',
+      style: TextStyle(fontSize: 48, color: Colors.white),
     ),
+    decoration: BoxDecoration(
+      color: Colors.grey,
+    ),
+    height: 200,
+    width: 350,
   );
 }

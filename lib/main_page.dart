@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mgt_prototype/market_place.dart';
 import 'package:mgt_prototype/my_bottle.dart';
 import 'package:mgt_prototype/project_page.dart';
 
@@ -64,7 +65,7 @@ Widget _buildPage(int index) {
       }
     case 2:
       {
-        return Text('Market Place');
+        return MarketPlace();
       }
     default:
       {
