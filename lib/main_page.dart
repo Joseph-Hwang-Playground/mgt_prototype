@@ -16,6 +16,20 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('My Bottle'),
+        actions: [
+          IconButton(
+            icon: new Icon(Icons.info),
+            alignment: Alignment.center,
+            padding: new EdgeInsets.symmetric(horizontal: 4.0),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: new Icon(Icons.settings),
+            alignment: Alignment.center,
+            padding: new EdgeInsets.symmetric(horizontal: 4.0),
+            onPressed: () {},
+          ),
+        ]
       ),
       body: _buildPage(_tabIndex),
       bottomNavigationBar: BottomNavigationBar(
