@@ -14,7 +14,7 @@ class _MarketPlaceState extends State<MarketPlace> {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(4.0),
-      margin: EdgeInsets.only(top: 16.0),
+      margin: EdgeInsets.only(top: 8.0),
       child: Column(
         children: [
           _buildSearch(_formKey, _focus),

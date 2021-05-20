@@ -8,11 +8,9 @@ class ProjectPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(12.0),
+      margin: EdgeInsets.only(top: 4.0),
       child: Column(
         children: [
-          SizedBox(
-            height: 20,
-          ),
           _buildToolBar(),
           SizedBox(
             height: 10,

@@ -17,7 +17,7 @@ class DesignsView extends StatelessWidget {
         physics: AlwaysScrollableScrollPhysics(),
         controller: _controller,
       ),
-      height: 220,
+      height: 185,
     );
   }
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 Widget buildBottleList(BuildContext context) {
   return Container(
-    height: 500,
+    height: 520,
     child: GridView.builder(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2, childAspectRatio: (9 / 16)),
