@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
+// import 'package:mgt_prototype/project_editor/modules.dart';
 
-Widget buildBottleList(BuildContext context) {
-  return Container(
-    height: 520,
-    child: GridView.builder(
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2, childAspectRatio: (9 / 16)),
-      itemBuilder: (context, index) => _buildBottleCard(),
-      itemCount: 12,
-      scrollDirection: Axis.vertical,
-    ),
-  );
-}
+// Widget buildModuleList(BuildContext context, int tabIndex, Function toggleTap) {
+//   return Container(
+//     height: 520,
+//     child: Column(
+//       children: [
+//         buildSelectModule
+//       ],
+//     )
+//   );
+// }
 
 Widget _buildBottleCard() {
   return Container(

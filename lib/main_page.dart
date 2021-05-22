@@ -16,7 +16,7 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('My Bottle'), actions: [
+      appBar: AppBar(title: Text('Aquarius'), actions: [
         IconButton(
           icon: new Icon(Icons.info),
           alignment: Alignment.center,

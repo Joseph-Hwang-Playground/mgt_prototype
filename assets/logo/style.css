@@ -1,0 +1,52 @@
+:root {
+  --base: #222831;
+  --line: #30475e;
+  --intermediate: #f2a365;
+  --highlight: #ececec;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.main span {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--highlight);
+}
+
+.main img {
+  width: 30px;
+  transform: rotate(45deg);
+}
+
+.verticalD {
+  height: 1rem;
+  width: 1px;
+}
+
+.horizontalD {
+  height: 1px;
+  width: 1rem;
+}
+
+.sub span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--line);
+}
+
+.logo {
+  width: 400px;
+  height: 400px;
+  background-color: var(--base);
+}

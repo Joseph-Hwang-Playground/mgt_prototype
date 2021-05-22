@@ -30,16 +30,9 @@ class MyBottle extends StatelessWidget {
 }
 
 Widget _buildDisplayBottle() {
-  return Container(
-    child: Text(
-      'Bottle이 들어갈 예정',
-      style: TextStyle(fontSize: 48, color: Colors.white),
-    ),
-    decoration: BoxDecoration(
-      color: Colors.grey,
-    ),
-    height: 200,
-    width: 350,
+  return ClipRRect(
+    child: Image.asset('assets/logo/logo.PNG'),
+    borderRadius: BorderRadius.circular(10.0),
   );
 }
 

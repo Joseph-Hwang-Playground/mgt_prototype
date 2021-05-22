@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mgt_prototype/market_place/bottle_list.dart';
+import 'package:mgt_prototype/project_editor/modules.dart';
 
 class MarketPlace extends StatefulWidget {
   @override
@@ -10,6 +11,20 @@ class _MarketPlaceState extends State<MarketPlace> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   FocusNode _focus = new FocusNode();
 
+  int _tabIndex = 1;
+
+  void toggleTab() {
+    if (_tabIndex == 1) {
+      setState(() {
+        _tabIndex = 2;
+      });
+    } else {
+      setState(() {
+        _tabIndex = 1;
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,7 +33,13 @@ class _MarketPlaceState extends State<MarketPlace> {
       child: Column(
         children: [
           _buildSearch(_formKey, _focus),
-          buildBottleList(context),
+          SizedBox(
+            height: 8.0,
+          ),
+          Container(
+            height: 520,
+            child: buildSelectModules(_tabIndex, this.toggleTab),
+          )
         ],
       ),
     );
@@ -40,7 +61,7 @@ Widget _buildSearch(Key key, FocusNode focusNode) {
             Expanded(
               child: TextFormField(
                 decoration: InputDecoration(
-                  hintText: 'Search for your bottle!',
+                  hintText: 'Search for your module!',
                   hintStyle: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
