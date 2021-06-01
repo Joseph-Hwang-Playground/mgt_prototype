@@ -33,12 +33,14 @@ class _ProjectEditorState extends State<ProjectEditor> {
         with magnetic power. Since it works with magnetic power, 
         it has no noise, silent enough!''',
         50,
+        false,
         'Mix various ingredients with slience');
     final DesignModuleResponse middleSmooth = DesignModuleResponse(
         'Middle Smooth',
         'assets/modules/middle_plain.jpg',
         'This module gives very awesome middle bottle design for your own custom bottle!',
         25,
+        false,
         'Modern');
     final FunctionModuleResponse filter = FunctionModuleResponse(
         'Filter',
@@ -46,12 +48,14 @@ class _ProjectEditorState extends State<ProjectEditor> {
         '''Filter module provides filtering function which can be useful 
         in situations like pouring tea, making cocktail, etc''',
         30,
+        false,
         'Filtering solid among liquid');
     final DesignModuleResponse topSmooth = DesignModuleResponse(
         'Top Smooth',
         'assets/modules/top_plain.jpg',
         'This module provies very awesome top bottle design for your own custom bottle!',
         20,
+        false,
         'Modern');
 
     return Container(

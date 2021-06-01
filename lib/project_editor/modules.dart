@@ -9,10 +9,6 @@ Widget buildSelectModules(int tabIndex, Function toggleTap) {
       children: [
         _buildTopBar(tabIndex, toggleTap),
         SizedBox(
-          height: 8,
-        ),
-        _buildSuggestion(),
-        SizedBox(
           height: 8.0,
         ),
         _buildModulesList(tabIndex),

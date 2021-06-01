@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:mgt_prototype/challenge_page.dart';
 import 'package:mgt_prototype/market_place.dart';
 import 'package:mgt_prototype/my_bottle.dart';
 import 'package:mgt_prototype/project_page.dart';
+import 'package:mgt_prototype/proposal_page.dart';
 
 class MainPage extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() {
+  State<MainPage> createState() {
     return _MainPageState();
   }
 }
 
 class _MainPageState extends State<MainPage> {
-  int _tabIndex = 1;
+  int _tabIndex = 2;
 
   @override
   Widget build(BuildContext context) {
@@ -38,9 +40,14 @@ class _MainPageState extends State<MainPage> {
           BottomNavigationBarItem(
               icon: Icon(Icons.create_new_folder), label: 'Projects'),
           BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_bag), label: 'Market Place'),
+          BottomNavigationBarItem(
               icon: Icon(Icons.home_rounded), label: 'Home'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_bag), label: 'Market Place'),
+              icon: Icon(Icons.people_alt), label: 'Proposal'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.assignment_turned_in_rounded),
+              label: 'Challenges'),
         ],
         currentIndex: _tabIndex,
         onTap: (index) {
@@ -48,6 +55,8 @@ class _MainPageState extends State<MainPage> {
             _tabIndex = index;
           });
         },
+        selectedItemColor: Colors.blue,
+        unselectedItemColor: Colors.blueGrey,
       ),
     );
   }
@@ -56,20 +65,16 @@ class _MainPageState extends State<MainPage> {
 Widget _buildPage(int index) {
   switch (index) {
     case 0:
-      {
-        return ProjectPage();
-      }
+      return ProjectPage();
     case 1:
-      {
-        return MyBottle();
-      }
+      return MarketPlace();
     case 2:
-      {
-        return MarketPlace();
-      }
+      return MyBottle();
+    case 3:
+      return ProposalPage();
+    case 4:
+      return ChallengePage();
     default:
-      {
-        return MyBottle();
-      }
+      return MyBottle();
   }
 }

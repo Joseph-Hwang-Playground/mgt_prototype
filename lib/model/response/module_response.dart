@@ -3,22 +3,24 @@ class BaseModuleResponse {
   String imgUrl;
   String description;
   double price;
+  bool isSelected;
 
-  BaseModuleResponse(this.name, this.imgUrl, this.description, this.price);
+  BaseModuleResponse(
+      this.name, this.imgUrl, this.description, this.price, this.isSelected);
 }
 
 class FunctionModuleResponse extends BaseModuleResponse {
   String function;
 
   FunctionModuleResponse(String name, String imgUrl, String description,
-      double price, this.function)
-      : super(name, imgUrl, description, price);
+      double price, bool isSelected, this.function)
+      : super(name, imgUrl, description, price, isSelected);
 }
 
 class DesignModuleResponse extends BaseModuleResponse {
   String design;
 
-  DesignModuleResponse(
-      String name, String imgUrl, String description, double price, this.design)
-      : super(name, imgUrl, description, price);
+  DesignModuleResponse(String name, String imgUrl, String description,
+      double price, bool isSelected, this.design)
+      : super(name, imgUrl, description, price, isSelected);
 }
